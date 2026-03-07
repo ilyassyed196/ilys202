@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('Hello') {
             steps {
-                echo 'Code GitHub se liya!'
+                echo 'Hello World!'
             }
         }
         stage('Build') {
@@ -19,3 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+            }
+        }
+    }
+}
