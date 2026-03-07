@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     stages {
@@ -16,9 +17,9 @@ pipeline {
                 echo 'Testing...'
             }
         }
-        stage('Deploy') {
+        stage('Docker Build') {
             steps {
-                echo 'Deploying...'
+                sh 'docker build -t myapp:latest .'
             }
         }
     }
